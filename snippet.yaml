@@ -1,0 +1,5 @@
+enabled: true
+route: /random
+redirect: true
+filters: {}
+filter_combinator: and    
