@@ -1,5 +1,4 @@
-name: Snippet
-version: 0.8.0
+﻿version: 0.8.0
 description: Output tiny html code from file in user/data directory. (Require Shortcodes Plugin)
 icon: sticky-note-o
 author:
