@@ -1,0 +1,12 @@
+name: Snippet
+version: 1.0.0
+description: Output tiny html code from user/data in text file. (Require Shortcodes Plugin)
+icon: sticky-note-o
+author:
+  name: Takefumi Ota
+  email: taketakegogo@gmail.com
+  url: http://gracix.com
+homepage: https://github.com/getgrav/grav-plugin-problems
+keywords: snippet, html, plugin, assistant, required
+bugs: https://github.com/getgrav/grav-plugin-problems/issues
+license: MIT
