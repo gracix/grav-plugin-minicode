@@ -24,6 +24,8 @@ class SnippetTwigExtension extends \Twig_Extension
     }
 
     /**
+     * Register twig filter.
+     *
      * @return array
      */
     public function getFilters()
@@ -35,6 +37,8 @@ class SnippetTwigExtension extends \Twig_Extension
     }
 
     /**
+     * Snippet filter implementation.
+     *
      * @param $content
      * @param null $options
      * @return string
@@ -44,13 +48,13 @@ class SnippetTwigExtension extends \Twig_Extension
         // Get data directory from plugin's option.
         $dir = $this->config['plugins.snippet.data_directory'];
 
-        if($dir == ''){
+        if ($dir == '') {
             $dir = 'data/'; // Default directory
         }
 
         // Get Realpath.
         // Return null if file not exists.
-        $filename = realpath(USER_DIR . $dir .'/' . $content);
+        $filename = realpath(USER_DIR . $dir . '/' . $content);
         if ($filename) {
             return file_get_contents($filename);
         } else {

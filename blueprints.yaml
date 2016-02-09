@@ -1,6 +1,6 @@
 name: Snippet
-version: 0.9.0
-description: Output tiny html code from file in user/data directory. (Require Shortcodes Plugin)
+version: 1.0.0
+description: Output tiny html code (or text) from file. Use twig filter.
 icon: sticky-note-o
 author:
   name: Takefumi Ota
@@ -51,7 +51,7 @@ form:
 
     data_directory:
       type: text
-      label: Snippets directory
+      label: Snippet files directory
       size: large
       validate:
         min: 1

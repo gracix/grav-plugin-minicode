@@ -1,4 +1,4 @@
 enabled: true
 twig_filter: true
 enabled_in_admin: false
-data_directory: data/
+data_directory: snippets/
