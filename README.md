@@ -12,11 +12,9 @@
 ## About
 
 `Snippet` is [Grav](https://getgrav.org/) plugin.
-This plugin is output tiny html code (or other text) inside a document from file. 
+This plugin add Twig filter `{{ snippet }}`. 
 
-## Require
-
-Require [Shortcodes Plugin](https://github.com/sommerregen/grav-plugin-shortcodes).
+`{{ snippet }} is output tiny html (or other text) inside a document from file. 
 
 
 ## Installation
@@ -27,19 +25,19 @@ Installing `Snippet` plugin can only manual install now. [Download](https://gith
     
 ## Usage
 
-    {{% snippet name="filename.txt" %}}
-
+    {{ 'filename.txt' |  snippet  }}
+    
 
  1. Write a tiny html (or other text) to file. (ex: snippet1.html)
- 2. The file put into user/data directory. (If not exists a user/data directory, create it.)
- 3. Write shortcode in page content. (ex: `{{% snippet name="snippet1.html" %}}`)
+ 2. The file put into user/data directory. (You can change directory path in plugin's config)
+ 3. Write twig tag in page content or theme file. (ex: `{{ 'filename.txt' |  snippet  }}`)
  4. Preview the site.
 
 ## Security
 
 ***!Caution!***
 
-This plugin **RAW** output from text file. Please check before upload.
+This plugin **RAW** output from text file. Please check HTML tags before upload.
 
 ## License
 
