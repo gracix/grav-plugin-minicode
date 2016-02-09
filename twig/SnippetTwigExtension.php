@@ -41,13 +41,17 @@ class SnippetTwigExtension extends \Twig_Extension
      */
     public function snippetFilter($content, $options = null)
     {
-        if (!$options) {
-            $options = $this->config->get('plugins.snippet.options');
-            var_dump($options);
+        // Get data directory from plugin's option.
+        $dir = $this->config['plugins.snippet.data_directory'];
+
+        if($dir == ''){
+            $dir = 'data/'; // Default directory
         }
 
-        $filename = USER_DIR . '/data/' . $content;
-        if (file_exists($filename)) {
+        // Get Realpath.
+        // Return null if file not exists.
+        $filename = realpath(USER_DIR . $dir .'/' . $content);
+        if ($filename) {
             return file_get_contents($filename);
         } else {
             return '';

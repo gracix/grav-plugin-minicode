@@ -1,5 +1,5 @@
-﻿name: Snippet
-version: 0.8.1
+name: Snippet
+version: 0.9.0
 description: Output tiny html code from file in user/data directory. (Require Shortcodes Plugin)
 icon: sticky-note-o
 author:
@@ -11,3 +11,47 @@ keywords: snippet, html, plugin, shortcode
 bugs: https://github.com/gracix/grav-plugin-snippet/issues
 license: MIT
 
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 1
+      options:
+          1: Enabled
+          0: Disabled
+      validate:
+           type: bool
+
+    enabled_in_admin:
+      type: toggle
+      label: Enable in admin
+      highlight: 0
+      default: 0
+      help: Should Smartypants plugin work in the admin during content preview
+      options:
+          1: Enabled
+          0: Disabled
+      validate:
+           type: bool
+
+    twig_filter:
+      type: toggle
+      label: Twig filter
+      highlight: 1
+      default: 1
+      help: Load the Twig filter to be availble in Twig templates
+      options:
+          1: Enabled
+          0: Disabled
+      validate:
+           type: bool
+
+    data_directory:
+      type: text
+      label: Snippets directory
+      size: large
+      validate:
+        min: 1

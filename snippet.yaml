@@ -1,5 +1,4 @@
 enabled: true
-route: /random
-redirect: true
-filters: {}
-filter_combinator: and    
+twig_filter: true
+enabled_in_admin: false
+data_directory: data/
