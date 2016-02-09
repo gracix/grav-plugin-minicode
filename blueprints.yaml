@@ -55,3 +55,15 @@ form:
       size: large
       validate:
         min: 1
+
+    check_html_dom:
+      type: toggle
+      label: Check HTML before output
+      highlight: 0
+      default: 0
+      help: Check broken tags in HTML. Output white space if get DOM error.
+      options:
+          1: Enabled
+          0: Disabled
+      validate:
+           type: bool

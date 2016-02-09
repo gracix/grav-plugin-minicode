@@ -2,3 +2,4 @@ enabled: true
 twig_filter: true
 enabled_in_admin: false
 data_directory: snippets/
+check_html_dom: false
