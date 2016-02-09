@@ -1,4 +1,5 @@
-﻿version: 0.8.0
+﻿name: Snippet
+version: 0.8.1
 description: Output tiny html code from file in user/data directory. (Require Shortcodes Plugin)
 icon: sticky-note-o
 author:
@@ -9,3 +10,4 @@ homepage: https://github.com/gracix/grav-plugin-snippet
 keywords: snippet, html, plugin, shortcode
 bugs: https://github.com/gracix/grav-plugin-snippet/issues
 license: MIT
+
