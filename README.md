@@ -11,33 +11,36 @@
 
 ## About
 
-`Snippet` is [Grav](https://getgrav.org/) plugin.
+`Minicode` is [Grav](https://getgrav.org/) plugin.
 
-This plugin add Twig filter `{{ snippet }}`.  The filter is output tiny html (or other text) inside a document from text file.  
+This plugin add Twig filter `{{ minicode }}`.  The filter is output tiny html (or other text) inside a document from text file.
+
+And it is filter can use on Templates too.
+You can output codes of site global. (ex: Sidebars, Ads, New product information...)
 
 
 ## Installation
 
-Installing `Snippet` plugin can only manual install now. [Download](https://github.com/gracix/grav-plugin-snippet/archive/master.zip) this plugin and extracting all plugin files to 
+Installing `Minicode` plugin can only manual install now. [Download](https://github.com/gracix/grav-plugin-minicode/archive/master.zip) this plugin and extracting all plugin files to 
 
-    user/plugins/snippet
+    user/plugins/minicode
     
 ## Usage
 
-    {{ 'filename.txt' |  snippet  }}
+    {{ 'filename.txt' |  minicode  }}
     
 
- 1. Create directory user/snippets if nothing. (This path is default. You can change directory name in plugin's config)
- 2. Write a tiny html (or other text) to file. (ex: snippet1.html)
- 3. The file put into user/snippets directory. 
- 4. Write twig tag in page content or theme file. (ex: `{{ 'snippet1.html' |  snippet  }}`)
+ 1. Create directory user/minicodes if nothing. (This name is default. You can change directory name in plugin's config)
+ 2. Write a tiny html (or other text) to file. (ex: minicode1.html)
+ 3. The file put into user/minicodes directory. (ex: user/minicodes/minicode1.html)
+ 4. Write twig tag in page content or theme file. (ex: `{{ 'minicode1.html' |  minicode  }}`)
  5. Preview the site.
 
 ## Security
 
 ***!Caution!***
 
-This plugin **RAW** output from text file. Please check Broken HTML tags and Security risk before upload.
+This plugin **RAW** output from file. Please check Broken HTML tags and Security risk before upload.
 
 ## License
 

@@ -9,13 +9,13 @@ use RocketTheme\Toolbox\Event\Event;
 
 
 /**
- * Class SnippetPlugin
+ * Class MinicodePlugin
  * @package Grav\Plugin
  */
-class SnippetPlugin extends Plugin
+class MinicodePlugin extends Plugin
 {
     /**
-     * @var SnippetPlugin
+     * @var MinicodePlugin
      */
 
     /**
@@ -34,7 +34,7 @@ class SnippetPlugin extends Plugin
      */
     public function onPluginsInitialized()
     {
-        if ($this->isAdmin() && !$this->config->get('plugins.snippet.enabled_in_admin', false)) {
+        if ($this->isAdmin() && !$this->config->get('plugins.minicode.enabled_in_admin', false)) {
             $this->active = false;
             return;
         }
@@ -49,12 +49,12 @@ class SnippetPlugin extends Plugin
      */
     public function onTwigExtensions()
     {
-        if (!$this->config->get('plugins.snippet.twig_filter')) {
+        if (!$this->config->get('plugins.minicode.twig_filter')) {
             return;
         }
 
-        require_once(__DIR__ . '/twig/SnippetTwigExtension.php');
-        $this->grav['twig']->twig->addExtension(new SnippetTwigExtension());
+        require_once(__DIR__ . '/twig/MinicodeTwigExtension.php');
+        $this->grav['twig']->twig->addExtension(new MinicodeTwigExtension());
     }
 
 
@@ -72,7 +72,7 @@ class SnippetPlugin extends Plugin
         if (!$inEvent && $blueprint->get('form.fields.tabs')) {
             $inEvent = true;
             $blueprints = new Data\Blueprints(__DIR__ . '/blueprints/');
-            $extends = $blueprints->get('snippet');
+            $extends = $blueprints->get('minicode');
             $blueprint->extend($extends, true);
             $inEvent = false;
         }

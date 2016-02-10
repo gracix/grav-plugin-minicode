@@ -1,4 +1,4 @@
-name: Snippet
+name: Mini Code
 version: 1.0.0
 description: Output tiny html code (or text) from file. Use twig filter.
 icon: sticky-note-o
@@ -6,9 +6,9 @@ author:
   name: Takefumi Ota
   email: taketakegogo@gmail.com
   url: http://gracix.com
-homepage: https://github.com/gracix/grav-plugin-snippet
-keywords: snippet, html, plugin, shortcode
-bugs: https://github.com/gracix/grav-plugin-snippet/issues
+homepage: https://github.com/gracix/grav-plugin-minicode
+keywords: snippet, minicode, html, plugin, shortcode
+bugs: https://github.com/gracix/grav-plugin-minicode/issues
 license: MIT
 
 form:
@@ -51,19 +51,7 @@ form:
 
     data_directory:
       type: text
-      label: Snippet files directory
+      label: Minicode files directory
       size: large
       validate:
         min: 1
-
-    check_html_dom:
-      type: toggle
-      label: Check HTML before output
-      highlight: 0
-      default: 0
-      help: Check broken tags in HTML. Output white space if get DOM error.
-      options:
-          1: Enabled
-          0: Disabled
-      validate:
-           type: bool
