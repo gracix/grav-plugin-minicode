@@ -13,10 +13,9 @@
 
 `Minicode` is [Grav](https://getgrav.org/) plugin.
 
-This plugin add Twig filter `{{ minicode }}`.  The filter is output tiny html (or other text) inside a document from text file.
+This plugin add Twig filter `{{ | minicode }}`.  The filter is output tiny html (or other text) inside a document from text file.
 
-And it is filter can use on Templates too.
-You can output codes of site global. (ex: Sidebars, Ads, New product information...)
+And the filter can use on Templates too. You can output codes of site global. (ex: Sidebars, Ads, New product information...)
 
 
 ## Installation

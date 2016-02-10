@@ -1,4 +1,11 @@
-# v1.0.0.
+# v1.1.0
+## 2016/02/09
+
+1. [](#new)
+    * Rename plugin snippet to minicode.
+
+
+# v1.0.0
 ## 2016/02/09
 
 1. [](#new)
