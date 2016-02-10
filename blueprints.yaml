@@ -1,5 +1,5 @@
 name: Mini Code
-version: 1.0.0
+version: 1.1.0
 description: Output tiny html code (or text) from file. Use twig filter.
 icon: sticky-note-o
 author:
